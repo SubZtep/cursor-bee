@@ -1,2 +1,2 @@
-import "./smokin-text"
+import "./smoking-text"
 import "./cursor-bee"

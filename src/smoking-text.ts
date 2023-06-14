@@ -19,7 +19,7 @@ class Loop extends HTMLElement {
       interval: number
     }) => void
   ) {
-    if (this.#rafID) return console.log("Loop is already looping")
+    if (this.#rafID) return
 
     let then = performance.now()
     let interval: number
@@ -40,7 +40,7 @@ class Loop extends HTMLElement {
   }
 
   stop() {
-    if (this.#rafID === 0) return console.log("Loop is already stopped")
+    if (this.#rafID === 0) return
     cancelAnimationFrame(this.#rafID)
     this.#rafID = 0
   }
