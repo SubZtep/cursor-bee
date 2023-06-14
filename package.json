@@ -2,8 +2,12 @@
   "name": "cursor-bee",
   "version": "1.0.0",
   "description": "Web Component gadget",
-  "main": "index.js",
+  "main": "bee.js",
+  "files": [
+    "bee.js"
+  ],
   "scripts": {
+    "dev": "esbuild src/index.ts --bundle --minify --target=es2020 --outfile=bee.js --watch",
     "build": "esbuild src/index.ts --bundle --minify --target=es2020 --outfile=bee.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

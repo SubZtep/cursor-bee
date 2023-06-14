@@ -31,8 +31,11 @@ customElements.define(
     connectedCallback() {
       document.body.addEventListener(
         "mousemove",
-        throttle(ev => {
-          this.setAttribute("style", `--pos: translate(${ev.clientX}px, ${ev.clientY}px)`)
+        throttle((ev) => {
+          this.setAttribute(
+            "style",
+            `--pos: translate(${ev.clientX}px, ${ev.clientY}px)`
+          )
         }, 600)
       )
     }
